@@ -1,0 +1,87 @@
+{
+  "status": "PREFLIGHT_COMPLETE_NO_FIT",
+  "input_rows": 6,
+  "scope_eligible_rows": 5,
+  "label_evidence_ready_rows": 5,
+  "strict_label_candidates_in_scope": 5,
+  "strict_label_candidate_deal_ids": [
+    "EATON_COOPER_COST_COMPONENT",
+    "ENSCO_ROWAN",
+    "CHEVRON_NOBLE",
+    "STERIS_CANTEL",
+    "LAM_KLA"
+  ],
+  "primary_full_feature_ready_rows": 5,
+  "primary_full_feature_ready_deal_ids": [
+    "EATON_COOPER_COST_COMPONENT",
+    "ENSCO_ROWAN",
+    "CHEVRON_NOBLE",
+    "STERIS_CANTEL",
+    "LAM_KLA"
+  ],
+  "target_only_feature_ready_diagnostic_rows": 5,
+  "target_only_feature_ready_diagnostic_deal_ids": [
+    "EATON_COOPER_COST_COMPONENT",
+    "ENSCO_ROWAN",
+    "CHEVRON_NOBLE",
+    "STERIS_CANTEL",
+    "LAM_KLA"
+  ],
+  "scope_excluded_deal_ids": [
+    "AMCOR_BEMIS"
+  ],
+  "blocked_rows": 1,
+  "approved_announcement_window": "2005-01-01 through 2022-12-31 inclusive",
+  "primary_target": "100 * announced annual pre-tax cost-synergy point claim / target revenue",
+  "currency_policy": "All synergy and revenue values used in the model must be sourced/reconciled to USD millions; non-USD values are blocked until documented conversion is performed.",
+  "target_unit": "percentage points of target revenue (e.g., 5 means 5% of target revenue)",
+  "primary_predictors": [
+    "log(acquirer revenue)",
+    "log(target revenue)",
+    "payment method known at announcement"
+  ],
+  "excluded_from_predictors": [
+    "acquisition premium",
+    "completion/termination outcome",
+    "post-announcement financial data",
+    "synergy realization outcome",
+    "listing/eligibility decision fields"
+  ],
+  "payment_method_counts_in_primary_ready_rows": {
+    "mixed": 3,
+    "stock": 2
+  },
+  "payment_method_categories_not_observed": [
+    "cash"
+  ],
+  "payment_method_categories_with_fewer_than_10_rows": [
+    "mixed",
+    "stock"
+  ],
+  "payment_method_effect_warning": "Payment-method contrasts cannot be trusted until each intended category has substantial support; unseen categories cannot be treated as empirically validated.",
+  "payment_method_support_warnings": [
+    "Payment method 'cash' has no approved training observations; do not issue empirically supported predictions for this category.",
+    "Payment method 'mixed' has only 3 approved observations; category effects are exploratory and unstable.",
+    "Payment method 'stock' has only 2 approved observations; category effects are exploratory and unstable."
+  ],
+  "payment_method_category_minimum_for_interpretation": 10,
+  "payment_method_support_is_not_a_causal_effect_test": true,
+  "target_recomputation_max_abs_difference_pp": 3.126388037344441e-13,
+  "blocker_counts": {
+    "both_parties_not_verified_us_exchange_listed_at_announcement": 1,
+    "tax_basis_evidence_not_from_sec_filing": 1,
+    "synergy_claim_source_not_sec_filing_or_exhibit": 1,
+    "revenue_source_not_sec_filing:acquirer_revenue_source_url": 1,
+    "payment_method_source_quote_does_not_support_category": 1,
+    "payment_method_source_not_sec_filing_or_exhibit": 1
+  },
+  "model_fit_performed": false,
+  "warning": "A source-reviewed announced-claim label is not evidence of realized synergies. The model estimates announced claims conditional on disclosure, not realized savings or causal synergy effects.",
+  "input_path": "data/processed/strict_verified_seed_observations.csv",
+  "outputs": {
+    "row_audit_csv": "data/processed/model_dataset_row_audit.csv",
+    "primary_features_csv": "data/processed/model_features_primary.csv",
+    "target_only_diagnostic_csv": "data/processed/model_features_target_only_diagnostic.csv",
+    "summary_json": "data/processed/model_dataset_preflight.json"
+  }
+}

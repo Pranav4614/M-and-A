@@ -1,0 +1,104 @@
+{
+  "note": "Descriptive small-n benchmark. NOT a validated forecasting model; do not condition on payment method or size.",
+  "n": 5,
+  "years": [
+    2012,
+    2015,
+    2018,
+    2020,
+    2021
+  ],
+  "deal_ids": [
+    "EATON_COOPER_COST_COMPONENT",
+    "ENSCO_ROWAN",
+    "CHEVRON_NOBLE",
+    "STERIS_CANTEL",
+    "LAM_KLA"
+  ],
+  "pct_of_target_revenue": {
+    "min": 4.806448034902208,
+    "median": 8.883995978748061,
+    "mean": 8.593935418168824,
+    "max": 11.693171188026191,
+    "sd": 2.8452494812487674,
+    "median_bootstrap_90ci": [
+      4.806448034902208,
+      11.693171188026191
+    ],
+    "predictive_interval_80": [
+      3.8152156490392644,
+      13.372655187298385
+    ]
+  },
+  "leave_one_out": {
+    "loo_mae_pp_median_rule": 3.022121023138228,
+    "loo_mae_pp_mean_rule": 2.810810544476171,
+    "loo_median_abs_pct_error_usd": 0.3310712107229556,
+    "loo_median_abs_pct_error_usd_ignoring_size": 0.3333333333333333,
+    "scaling_wins": 3,
+    "scaling_mean_ape": 0.42542330171185344,
+    "ignoring_size_mean_ape": 0.5524568764568765,
+    "scaling_verdict": "inconclusive",
+    "loo_interval_coverage": 0.8,
+    "coverage_note": "with n=5 coverage moves in steps of 20%; treat as uninformative",
+    "nominal_coverage": 0.8,
+    "spread_reference_mad_pp": 2.1241942662649604
+  },
+  "leave_one_out_rows": [
+    {
+      "deal_id": "EATON_COOPER_COST_COMPONENT",
+      "actual_pct": 4.806,
+      "median_pred": 9.855,
+      "mean_pred": 9.541,
+      "lo": 5.522,
+      "hi": 13.559,
+      "covered": false,
+      "usd_ape_median": 1.05,
+      "usd_ape_const_dollar": 0.231
+    },
+    {
+      "deal_id": "ENSCO_ROWAN",
+      "actual_pct": 11.693,
+      "median_pred": 7.822,
+      "mean_pred": 7.819,
+      "lo": 3.047,
+      "hi": 12.591,
+      "covered": true,
+      "usd_ape_median": 0.331,
+      "usd_ape_const_dollar": 0.7
+    },
+    {
+      "deal_id": "CHEVRON_NOBLE",
+      "actual_pct": 6.76,
+      "median_pred": 9.855,
+      "mean_pred": 9.052,
+      "lo": 3.441,
+      "hi": 14.664,
+      "covered": true,
+      "usd_ape_median": 0.458,
+      "usd_ape_const_dollar": 0.333
+    },
+    {
+      "deal_id": "STERIS_CANTEL",
+      "actual_pct": 10.826,
+      "median_pred": 7.822,
+      "mean_pred": 8.036,
+      "lo": 2.63,
+      "hi": 13.442,
+      "covered": true,
+      "usd_ape_median": 0.278,
+      "usd_ape_const_dollar": 1.318
+    },
+    {
+      "deal_id": "LAM_KLA",
+      "actual_pct": 8.884,
+      "median_pred": 8.793,
+      "mean_pred": 8.521,
+      "lo": 2.515,
+      "hi": 14.527,
+      "covered": true,
+      "usd_ape_median": 0.01,
+      "usd_ape_const_dollar": 0.18
+    }
+  ]
+}

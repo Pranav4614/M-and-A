@@ -1,0 +1,79 @@
+{
+  "status": "BLOCKED_BEFORE_FIT",
+  "gate_pass": false,
+  "eligible_n": 5,
+  "input_n": 6,
+  "partition_sizes": {
+    "development": 0,
+    "calibration": 0,
+    "test": 0
+  },
+  "partition_years": {
+    "development": [],
+    "calibration": [],
+    "test": []
+  },
+  "rolling_cv_folds": [],
+  "problems": [
+    "Only 5 US-listed, strict-label, full-feature-ready rows; governance floor is 100.",
+    "Year-grouped development set has 0 rows; minimum is 60.",
+    "Year-grouped calibration set has 0 rows; minimum is 10.",
+    "Year-grouped final future test has 0 rows; minimum is 20.",
+    "Only 0 valid whole-year expanding-window folds; minimum is 3.",
+    "Fewer than 8 distinct announcement years in model-ready rows; future-period validation is too fragile."
+  ],
+  "payment_method_category_counts": {
+    "mixed": 3,
+    "stock": 2
+  },
+  "payment_method_support_warnings": [
+    "No approved rows in the current model-ready cohort for payment category 'cash'; do not issue empirically supported predictions for it.",
+    "Only 2 approved rows in the current model-ready cohort for payment category 'stock'; category effects are not stable enough for strong interpretation.",
+    "Only 3 approved rows in the current model-ready cohort for payment category 'mixed'; category effects are not stable enough for strong interpretation."
+  ],
+  "minimum_rows_per_payment_method_for_interpretation": 10,
+  "minimum_n_is_governance_floor_not_statistical_guarantee": true,
+  "prediction_task": "Estimate the announced annual pre-tax cost-synergy point claim normalized by target revenue, conditional on qualifying deals with quantified claims.",
+  "not_the_task": "Does not estimate realized synergy savings, causal merger effects, or whether the management claim will come true.",
+  "run_manifest": {
+    "run_timestamp_utc": "2026-10-24T13:16:42.559920+00:00",
+    "python_version": "3.12.3",
+    "pandas_version": "3.0.2",
+    "numpy_version": "2.4.4",
+    "scikit_learn_version": "1.8.0",
+    "input_file_name": "strict_verified_seed_observations.csv",
+    "input_sha256": "a74d000b64ce52c61bea7bd9cb845e59911316b32550e4c6da83f67707e3023d",
+    "training_script_sha256": "9f27fd3b9aca2cdebec406c65ce415a525e51035089c6eb7f080eace896351de",
+    "source_data_attested_real": true,
+    "data_is_synthetic": false,
+    "project_version": "model_credibility_v3"
+  },
+  "preflight_status": "PREFLIGHT_COMPLETE_NO_FIT",
+  "preflight_scope_n": 5,
+  "preflight_label_evidence_n": 5,
+  "preflight_feature_blocker_counts": {
+    "both_parties_not_verified_us_exchange_listed_at_announcement": 1,
+    "tax_basis_evidence_not_from_sec_filing": 1,
+    "synergy_claim_source_not_sec_filing_or_exhibit": 1,
+    "revenue_source_not_sec_filing:acquirer_revenue_source_url": 1,
+    "payment_method_source_quote_does_not_support_category": 1,
+    "payment_method_source_not_sec_filing_or_exhibit": 1
+  },
+  "preflight_payment_method_support_warnings": [
+    "Payment method 'cash' has no approved training observations; do not issue empirically supported predictions for this category.",
+    "Payment method 'mixed' has only 3 approved observations; category effects are exploratory and unstable.",
+    "Payment method 'stock' has only 2 approved observations; category effects are exploratory and unstable."
+  ],
+  "primary_predictors": [
+    "feature_log_acquirer_revenue",
+    "feature_log_target_revenue",
+    "payment_method_model"
+  ],
+  "target_only_variant_available_for_ablation": true,
+  "premium_excluded_from_predictors": true,
+  "subsequent_outcome_excluded_from_predictors": true,
+  "year_used_for_grouped_splits_not_as_predictor": true,
+  "model_fit_attempted": false,
+  "test_metric_values": null,
+  "methodology": "No fit: strict data and temporal-validation gates remain in force."
+}

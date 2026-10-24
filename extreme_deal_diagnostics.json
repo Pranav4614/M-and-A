@@ -1,0 +1,25 @@
+{
+  "status": "INSUFFICIENT_N_FOR_OUTLIER_CLASSIFICATION",
+  "n_label_usable_rows": 5,
+  "minimum_n_for_outlier_classification": 10,
+  "target_unit": "percentage points of target revenue",
+  "min": 4.806448034902208,
+  "q1": 6.7598017124831005,
+  "median": 8.883995978748061,
+  "q3": 10.826260176684565,
+  "max": 11.693171188026193,
+  "iqr": 4.066458464201465,
+  "mad": 2.1241942662649604,
+  "iqr_outlier_candidates": 0,
+  "robust_z_outlier_candidates": 0,
+  "policy": "Extreme observations are review candidates only and are never removed automatically.",
+  "feature_note": "A row with a usable synergy label but unresolved revenue feature definitions may appear in label distribution diagnostics, while remaining blocked from primary feature training.",
+  "preflight_blockers": {
+    "both_parties_not_verified_us_exchange_listed_at_announcement": 1,
+    "tax_basis_evidence_not_from_sec_filing": 1,
+    "synergy_claim_source_not_sec_filing_or_exhibit": 1,
+    "revenue_source_not_sec_filing:acquirer_revenue_source_url": 1,
+    "payment_method_source_quote_does_not_support_category": 1,
+    "payment_method_source_not_sec_filing_or_exhibit": 1
+  }
+}

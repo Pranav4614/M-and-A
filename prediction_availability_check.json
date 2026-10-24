@@ -1,0 +1,5 @@
+{
+  "status": "MODEL_NOT_AVAILABLE",
+  "reason": "No fitted model metadata is present. The project training gate currently blocks fitting until the verified real-data sample and temporal validation design are sufficient.",
+  "predictions": null
+}

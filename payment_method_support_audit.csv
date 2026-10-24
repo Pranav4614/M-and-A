@@ -1,0 +1,4 @@
+payment_method,approved_primary_rows,share_of_primary_rows,support_status,minimum_for_stronger_interpretation
+cash,0,0.0,ABSENT_UNSUPPORTED,10
+stock,1,0.25,LOW_SUPPORT_LT_10,10
+mixed,3,0.75,LOW_SUPPORT_LT_10,10
